@@ -1,5 +1,5 @@
 Name:           vulkan-headers
-Version:        1.1.111
+Version:	1.1.112
 Release:        1
 Summary:        Vulkan Header files and API registry
 
