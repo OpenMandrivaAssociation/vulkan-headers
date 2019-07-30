@@ -1,15 +1,13 @@
-Name:           vulkan-headers
-Version:	1.1.115
+Name:		vulkan-headers
+Version:	1.1.117
 Release:	1
-Summary:        Vulkan Header files and API registry
-
-License:        ASL 2.0
-URL:            https://github.com/KhronosGroup/Vulkan-Headers
-Source0:        https://github.com/KhronosGroup/Vulkan-Headers/archive/v%{version}.tar.gz
-
-BuildRequires:  cmake
-BuildRequires:  ninja
-BuildArch:      noarch       
+Summary:	Vulkan Header files and API registry
+License:	ASL 2.0
+URL:		https://github.com/KhronosGroup/Vulkan-Headers
+Source0:	https://github.com/KhronosGroup/Vulkan-Headers/archive/Vulkan-Headers-%{version}.tar.gz
+BuildRequires:	cmake
+BuildRequires:	ninja
+BuildArch:	noarch
 
 %description
 Vulkan Header files and API registry
@@ -17,16 +15,14 @@ Vulkan Header files and API registry
 %prep
 %autosetup -n Vulkan-Headers-%{version}
 
-
 %build
 %cmake \
 	-G Ninja
-%ninja_build
 
+%ninja_build
 
 %install
 %ninja_install -C build
-
 
 %files
 %license LICENSE.txt
