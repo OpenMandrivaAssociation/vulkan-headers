@@ -1,5 +1,5 @@
 Name:		vulkan-headers
-Version:	1.1.126
+Version:	1.1.127
 Release:	1
 Summary:	Vulkan Header files and API registry
 License:	ASL 2.0
