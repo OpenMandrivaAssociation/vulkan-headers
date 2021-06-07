@@ -1,8 +1,8 @@
 %define	oname	Vulkan-Headers
 
 Name:		vulkan-headers
-Version:	1.2.175
-Release:	2
+Version:	1.2.180
+Release:	1
 Summary:	Vulkan Header files and API registry
 License:	ASL 2.0
 URL:		https://github.com/KhronosGroup/Vulkan-Headers
