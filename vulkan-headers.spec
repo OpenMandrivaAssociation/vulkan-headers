@@ -1,7 +1,7 @@
-%define	oname	Vulkan-Headers
+%define oname Vulkan-Headers
 
 Name:		vulkan-headers
-Version:	1.2.180
+Version:	1.2.184
 Release:	1
 Summary:	Vulkan Header files and API registry
 License:	ASL 2.0
@@ -13,7 +13,7 @@ BuildRequires:	ninja
 BuildArch:	noarch
 
 %description
-Vulkan Header files and API registry
+Vulkan Header files and API registry.
 
 %prep
 %autosetup -n %{oname}-%{version}
