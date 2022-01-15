@@ -1,13 +1,13 @@
 %define oname Vulkan-Headers
+%define snapshot 20220115
 
 Name:		vulkan-headers
-Version:	1.2.203
+Version:	1.2.203%{?snapshot:.%{snapshot}}
 Release:	1
 Summary:	Vulkan Header files and API registry
 License:	ASL 2.0
 URL:		https://github.com/KhronosGroup/Vulkan-Headers
-Source0:	https://github.com/KhronosGroup/Vulkan-Headers/archive/v%{version}/%{oname}-%{version}.tar.gz
-Patch0:		https://github.com/KhronosGroup/Vulkan-Headers/commit/cd913e84a81dd9b4e35aad4b10c2388f6f034063.patch
+Source0:	https://github.com/KhronosGroup/Vulkan-Headers/archive/%{?snapshot:refs/heads/main}%{!?snapshot:v%{version}/%{oname}-%{version}}.tar.gz
 BuildRequires:	cmake
 BuildRequires:	ninja
 BuildArch:	noarch
@@ -16,18 +16,15 @@ BuildArch:	noarch
 Vulkan Header files and API registry.
 
 %prep
-%autosetup -n %{oname}-%{version}
-
-%build
+%autosetup -n %{oname}-%{?snapshot:main}%{!?snapshot:%{version}}
 %cmake \
 	-G Ninja
 
-%ninja_build
+%build
+%ninja_build -C build
 
 %install
 %ninja_install -C build
-mkdir -p %{buildroot}%{_includedir}/vk_video
-mv *.h %{buildroot}%{_includedir}/vk_video/
 
 %files
 %license LICENSE.txt
