@@ -2,8 +2,8 @@
 #define snapshot 20220115
 
 Name:		vulkan-headers
-Version:	1.3.227
-Release:	%{?snapshot:0.%{snapshot}.}1
+Version:	1.3.231
+Release:	%{?snapshot:1.%{snapshot}.}1
 Summary:	Vulkan Header files and API registry
 License:	ASL 2.0
 URL:		https://github.com/KhronosGroup/Vulkan-Headers
