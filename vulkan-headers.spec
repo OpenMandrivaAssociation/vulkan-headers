@@ -2,7 +2,7 @@
 #define snapshot 20220115
 
 Name:		vulkan-headers
-Version:	1.3.231
+Version:	1.3.232
 Release:	%{?snapshot:1.%{snapshot}.}1
 Summary:	Vulkan Header files and API registry
 License:	ASL 2.0
@@ -11,12 +11,16 @@ Source0:	https://github.com/KhronosGroup/Vulkan-Headers/archive/%{?snapshot:refs
 BuildRequires:	cmake
 BuildRequires:	ninja
 BuildArch:	noarch
+Requires:	pkgconfig(wayland-client)
+Requires:	pkgconfig(x11)
+Requires:	pkgconfig(xcb)
+Requires:	pkgconfig(xrandr)
 
 %description
 Vulkan Header files and API registry.
 
 %prep
-%autosetup -n %{oname}-%{?snapshot:main}%{!?snapshot:%{version}}
+%autosetup -n %{oname}-%{?snapshot:main}%{!?snapshot:%{version}} -p1
 %cmake \
 	-G Ninja
 
