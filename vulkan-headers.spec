@@ -2,7 +2,7 @@
 #define snapshot 20220115
 
 Name:		vulkan-headers
-Version:	1.3.232
+Version:	1.3.234
 Release:	%{?snapshot:1.%{snapshot}.}1
 Summary:	Vulkan Header files and API registry
 License:	ASL 2.0
@@ -36,3 +36,5 @@ Vulkan Header files and API registry.
 %{_includedir}/vulkan
 %{_includedir}/vk_video
 %{_datadir}/vulkan
+%dir %{_datadir}/cmake/VulkanHeaders
+%{_datadir}/cmake/VulkanHeaders/*.cmake
