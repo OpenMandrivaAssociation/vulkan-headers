@@ -2,7 +2,7 @@
 #define snapshot 20220115
 
 Name:		vulkan-headers
-Version:	1.3.250
+Version:	1.3.264
 Release:	%{?snapshot:1.%{snapshot}.}1
 Summary:	Vulkan Header files and API registry
 License:	ASL 2.0
@@ -31,7 +31,7 @@ Vulkan Header files and API registry.
 %ninja_install -C build
 
 %files
-%license LICENSE.txt
+%license LICENSE.md
 %doc README.md
 %{_includedir}/vulkan
 %{_includedir}/vk_video
