@@ -1,3 +1,4 @@
+%undefine _debugsource_packages
 %define oname Vulkan-Headers
 #define snapshot 20220115
 
