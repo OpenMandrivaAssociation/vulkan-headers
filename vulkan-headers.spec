@@ -3,7 +3,7 @@
 #define snapshot 20220115
 
 Name:		vulkan-headers
-Version:	1.4.358
+Version:	1.4.359
 Release:	%{?snapshot:1.%{snapshot}.}1
 Summary:	Vulkan Header files and API registry
 License:	ASL 2.0
@@ -21,7 +21,7 @@ Requires:	pkgconfig(xrandr)
 Vulkan Header files and API registry.
 
 %prep
-%autosetup -n Vulkan-Headers-1.4.358 -p1
+%autosetup -n Vulkan-Headers-%{version} -p1
 %cmake \
 	-G Ninja
 
