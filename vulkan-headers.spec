@@ -3,7 +3,7 @@
 #define snapshot 20220115
 
 Name:		vulkan-headers
-Version:	1.4.359
+Version:	1.4.366
 Release:	%{?snapshot:1.%{snapshot}.}1
 Summary:	Vulkan Header files and API registry
 License:	ASL 2.0
